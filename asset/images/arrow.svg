@@ -1,0 +1,5 @@
+<svg class="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 8">
+                <polyline vector-effect="non-scaling-stroke" points="12.8,0.6 16.1,4 12.8,7.3" stroke="currentColor"
+                  fill="transparent"></polyline>
+                <line vector-effect="non-scaling-stroke" x1="0" y1="4" x2="16.1" y2="4" stroke="currentColor"></line>
+              </svg>

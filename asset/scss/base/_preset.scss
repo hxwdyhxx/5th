@@ -1,0 +1,162 @@
+.blind {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    margin: -1px;
+}
+
+.gutter {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.grid {
+    display: grid;
+    gap: 25px;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: auto;
+}
+
+
+
+
+
+// ***************** 바로가기 ***************** //
+#skipNav {
+    position: relative;
+    z-index: 3000
+}
+
+#skipNav a {
+    position: absolute;
+    top: -30px;
+    left: 0;
+    width: 138px;
+    border: 1px solid #4ec53d;
+    background: #333;
+    text-align: center
+}
+
+#skipNav a:active,
+#skipNav a:focus {
+    top: 0;
+    text-decoration: none;
+    z-index: 1000
+}
+
+#skipNav span {
+    display: inline-block;
+    padding: 2px 6px 0 0;
+    font-size: 13px;
+    line-height: 26px;
+    color: #fff;
+    letter-spacing: -1px;
+    white-space: nowrap
+}
+
+// ***************** 바로가기 끝 ***************** //
+
+
+// ***************** sp ***************** //
+
+
+
+
+.common-link {
+    color: currentColor;
+    border: 1px solid $foreground;
+    cursor: pointer;
+    margin: 0;
+    display: inline-flex;
+    padding: 7.5px 15px;
+    overflow: hidden;
+    position: relative;
+    font-size: 10px;
+    background: transparent;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+    align-items: center;
+    line-height: 1.6;
+    border-radius: 80px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    justify-content: center;
+    text-decoration: none;
+    &::after{
+        content: '';
+        vertical-align: top;
+        width: 15px;
+        height: 10px;
+        display: inline-block;
+        background: url(../images/arrow.svg) center/100% no-repeat;
+        transition: 0.3s;
+        margin-left: 10px;
+    }
+    &::before{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background: #f00;
+        transition: 0.3s;
+        z-index: -1;
+    }
+    &:hover{
+        border: 1px solid #f00;
+        &::before{
+            height: 100%;
+        }
+        &::after{
+            transform: translateX(10px);
+        }
+    }
+}
+
+
+
+
+
+
+
+
+.project {
+    display: block;
+    opacity: 0.5;
+    font-size: 13px;
+    font-family: "ABCMonumentGroteskMono", "Lucida Sans", Tahoma, sans-serif;
+    line-height: 1.2;
+    white-space: pre-wrap;
+    text-transform: uppercase;
+}
+
+
+.group-title {
+    padding: 30px 25px 100px;
+
+    @extend .grid;
+
+    .title {
+        grid-column: 1 / span 2;
+        font-size: 65px;
+        line-height: 1;
+        letter-spacing: 0.65px;
+        font-weight: 500;
+    }
+
+
+    .dsc-box {
+        max-width: 400px;
+        grid-column: 5 / span 2;
+    }
+
+    .dsc {
+        font-size: 15px;
+        font-family: $eng;
+        line-height: 2;
+        margin-bottom: 20px;
+    }
+    
+}

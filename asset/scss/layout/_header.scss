@@ -1,0 +1,67 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: block;
+    z-index: 10;
+    background-color: $background;
+    display: flex;
+    height: 100px;
+    transition: 0.5s;
+    .line{
+        width:0;
+        position: absolute;
+        bottom: 0;left: 0;
+        height: 1px;
+        background: rgb(230, 230, 230);
+    }
+    &.scroll{
+        height: 50px;
+    }
+    .logo{
+        display: flex;
+        align-items: center;
+        padding: 0 20px;
+        flex-shrink: 0;
+    }
+
+    .gnb {
+        flex: 1;
+        // background: #00f;
+        &-list {
+            display: flex;
+            height: 100%;
+        }
+        &-item {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            padding-left: 20px;
+        }
+        &-link {
+            position: relative;
+            &::after {
+                content: "";
+                left: 0;
+                bottom: 0;
+                height: 1px;
+                width: 0;
+                position: absolute;
+                transition: width 0.15s ease-in-out;
+                background-color: currentColor;
+            }
+            &:hover{
+                &::after {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
