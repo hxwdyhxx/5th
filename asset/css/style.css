@@ -880,7 +880,6 @@ button {
   .link-paper .dsc-wrap {
     gap: 25px;
     grid-column: 3/span 5;
-    grid-template-rows: auto -webkit-min-content;
     grid-template-rows: auto min-content;
     grid-template-columns: repeat(5, 1fr);
   }

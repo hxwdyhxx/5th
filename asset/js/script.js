@@ -201,23 +201,4 @@ $(document).ready(function () {
 
 
 
-    footer = gsap.timeline({
-        scrollTrigger: {
-            trigger: '.footer',
-            start: "0% 70%", 
-            end: "100% 0%", //
-            // markers:true,
-        },
-    })
-    footer
-        .to('.', {})
-        .addLabel('a')
-        .to('.', {}, 'a')
-        .to('.', {}, 'a')
-        .to('.', {}, 'a')
-
-    //****************** footer ******************//    
-
-    //****************** footer 끝 ******************//    
-
 }) //////////////////// 지우지 마세요 //////////////////////
